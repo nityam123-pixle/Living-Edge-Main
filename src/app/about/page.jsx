@@ -114,11 +114,11 @@ export default function AboutPage() {
                     {/* Buttons */}
                     <div className="mt-8 flex flex-wrap justify-center gap-4">
                         <Button variant="default" size="lg" className="bg-white text-black hover:bg-white/90">
-                            View Our Work
+                            <Link href="/projects">View Our Work</Link>
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                         <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
-                            Contact Us
+                            <Link href="/#contact">Contact Us</Link>
                         </Button>
                     </div>
                 </div>
