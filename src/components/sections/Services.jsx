@@ -59,7 +59,7 @@ export function Services() {
 
   const paragraphVariants = {
     hidden: { opacity: 0, x: -40 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay: 0.1 } },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.4, delay: 0.1 } },
   };
 
   const featureVariants = {
@@ -67,13 +67,13 @@ export function Services() {
     visible: i => ({
       opacity: 1,
       y: 0,
-      transition: { delay: 0.2 + i * 0.10, duration: 0.4 },
+      transition: { delay: 0.2 + i * 0.5, duration: 0.4 },
     }),
   };
 
   const buttonVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { delay: 0.3 + features.length * 0.10 + 0.1, duration: 0.4 } },
+    visible: { opacity: 1, y: 0, transition: { delay: 0.2 + features.length * 0.5 + 0.1, duration: 0.4 } },
   };
 
   return (
