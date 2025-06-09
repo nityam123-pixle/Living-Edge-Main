@@ -495,7 +495,7 @@ export default function ServicesPage() {
       </div>
 
       {/* Why Choose Us Section */}
-      <div className="relative py-24 px-4 bg-black">
+      <div className="rexwslative py-24 px-4 bg-black">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>

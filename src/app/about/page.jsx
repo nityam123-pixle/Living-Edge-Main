@@ -66,10 +66,11 @@ const achievements = [
 export default function AboutPage() {
     return (
         <div className="min-h-screen bg-black text-white overflow-x-hidden">
-            <div className="absolute top-4 left-4 z-50 flex items-center space-x-4">
+            {/* Fixed top header */}
+            <div className="relative z-50 w-full flex items-center justify-between px-4 pt-4 md:px-8 md:pt-6">
                 <Link href="/">
                     <Image
-                        src="/logo2.png" // Replace with your actual logo path
+                        src="/logo2.png"
                         alt="Logo"
                         width={120}
                         height={60}
@@ -84,9 +85,10 @@ export default function AboutPage() {
                     </button>
                 </Link>
             </div>
-            {/* Hero Section with Lamp Effect */}
+
+            {/* Lamp + Hero Section */}
             <LampContainer>
-                <div className="flex flex-col items-center justify-center relative z-20 text-center px-4 w-full max-w-6xl mx-auto">
+                <div className="flex flex-col items-center justify-center relative z-20 text-center px-4 w-full max-w-6xl mx-auto mt-20 md:mt-32">
                     <motion.h1
                         initial={{ opacity: 0.5, y: 100 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -95,35 +97,30 @@ export default function AboutPage() {
                             duration: 0.8,
                             ease: "easeInOut",
                         }}
-                        className="mt-10 md:mt-20 bg-gradient-to-br from-neutral-300 to-neutral-500 py-2 md:py-4 bg-clip-text text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight text-transparent"
+                        className="bg-gradient-to-br from-neutral-300 to-neutral-500 py-2 md:py-4 bg-clip-text text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-medium tracking-tight text-transparent"
                     >
                         Crafting Spaces,
-                        <br /> Creating Stories
+                        <br /> Creating Stories...
                     </motion.h1>
-                    <div className="w-full max-w-4xl mx-auto px-2 mt-6">
+
+                    {/* Add your TextGenerateEffect or description here */}
+                    <div className="mt-6 max-w-2xl text-base sm:text-lg md:text-xl text-white/80">
                         <TextGenerateEffect
-                            words="We believe that great design isn't just about aesthetics—it's about creating spaces that inspire, comfort, and reflect the unique story of those who inhabit them."
-                            className="text-base sm:text-lg md:text-xl text-neutral-300 leading-relaxed"
+                           words="We believe that great design isn't just about aesthetics—it's about creating spaces that inspire, comfort, and reflect the unique story of those who inhabit them."
+                           className="text-base sm:text-lg md:text-xl text-neutral-300 leading-relaxed"
                         />
                     </div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5, duration: 0.8 }}
-                        className="mt-6 sm:mt-8 flex flex-col items-center justify-center sm:flex-row gap-3 sm:gap-4 w-full max-w-md sm:max-w-none px-4"
-                    >
-                        <Button size="lg" className="bg-white text-black hover:bg-gray-200 w-full sm:w-auto">
-                            <Link href="/projects">View Our Work</Link>
+
+                    {/* Buttons */}
+                    <div className="mt-8 flex flex-wrap justify-center gap-4">
+                        <Button variant="default" size="lg" className="bg-white text-black hover:bg-white/90">
+                            View Our Work
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
-                        <Button
-                            size="lg"
-                            variant="outline"
-                            className="border-white text-white hover:bg-white hover:text-black w-full sm:w-auto"
-                        >
-                            <Link href="/#contact">Get In Touch</Link>
+                        <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                            Contact Us
                         </Button>
-                    </motion.div>
+                    </div>
                 </div>
             </LampContainer>
 
@@ -151,9 +148,9 @@ export default function AboutPage() {
                                         Over the past four years, we have proudly served 80+ architects, interior designers, and contractors,
                                     </p>
                                     <p>
-                                         becoming a
-                                         trusted name in the industry. Our commitment is to provide comprehensive solutions under one roof, catering to
-                                         diverse residential, commercial, and hospitality needs. Backed by expertise and collaboration, we ensure every
+                                        becoming a
+                                        trusted name in the industry. Our commitment is to provide comprehensive solutions under one roof, catering to
+                                        diverse residential, commercial, and hospitality needs. Backed by expertise and collaboration, we ensure every
                                         project is executed with precision and excellence.
                                     </p>
                                     <p>

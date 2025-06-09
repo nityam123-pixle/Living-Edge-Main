@@ -52,7 +52,7 @@ export const Timeline = ({ data }) => {
                             initial={variant}
                             whileInView={{ x: 0, y: 0, opacity: 1 }}
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            viewport={{ once: true, amount: 0.4 }}
+                            viewport={{ once: true, amount: 0.1 }}
                         >
                             {/* Sticky Title */}
                             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">

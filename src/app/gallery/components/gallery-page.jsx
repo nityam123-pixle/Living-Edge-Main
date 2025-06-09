@@ -183,7 +183,7 @@ export default function GalleryPage() {
 
       {/* Hero Section */}
       <motion.section
-        className="relative z-10 pt-20 pb-16 px-4 text-center"
+        className="relative z-10 pt-20 pb-16 px-4 text-center mt-20"
         variants={heroVariants}
         initial="hidden"
         animate={isLoaded ? "visible" : "hidden"}
